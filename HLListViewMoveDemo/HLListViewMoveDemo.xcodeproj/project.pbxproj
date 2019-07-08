@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7518A1322D356E0000F9AD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7518A1222D356E0000F9AD6 /* AppDelegate.m */; };
+		C7518A1622D356E0000F9AD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7518A1522D356E0000F9AD6 /* ViewController.m */; };
+		C7518A1922D356E0000F9AD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7518A1722D356E0000F9AD6 /* Main.storyboard */; };
+		C7518A1B22D356E1000F9AD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7518A1A22D356E1000F9AD6 /* Assets.xcassets */; };
+		C7518A1E22D356E1000F9AD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7518A1C22D356E1000F9AD6 /* LaunchScreen.storyboard */; };
+		C7518A2122D356E1000F9AD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7518A2022D356E1000F9AD6 /* main.m */; };
+		C7DE2CA522D357CF0059D783 /* UICollectionView+HLListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2C9A22D357CF0059D783 /* UICollectionView+HLListView.m */; };
+		C7DE2CA622D357CF0059D783 /* UITableView+HLListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2C9E22D357CF0059D783 /* UITableView+HLListView.m */; };
+		C7DE2CA722D357CF0059D783 /* HLListViewMoveGestureCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CA022D357CF0059D783 /* HLListViewMoveGestureCoordinator.m */; };
+		C7DE2CA822D357CF0059D783 /* UIView+HLScreenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CA222D357CF0059D783 /* UIView+HLScreenshot.m */; };
+		C7DE2CA922D357CF0059D783 /* HLDragArea.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CA322D357CF0059D783 /* HLDragArea.m */; };
+		C7DE2CAA22D357CF0059D783 /* NSMutableArray+HLExchangeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CA422D357CF0059D783 /* NSMutableArray+HLExchangeObject.m */; };
+		C7DE2CBD22D357E00059D783 /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CAD22D357E00059D783 /* UIView+ZJFrame.m */; };
+		C7DE2CBE22D357E00059D783 /* ZJTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CB222D357E00059D783 /* ZJTitleView.m */; };
+		C7DE2CBF22D357E00059D783 /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CB322D357E00059D783 /* UIViewController+ZJScrollPageController.m */; };
+		C7DE2CC022D357E00059D783 /* ZJContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CB622D357E00059D783 /* ZJContentView.m */; };
+		C7DE2CC122D357E00059D783 /* ZJCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CB722D357E00059D783 /* ZJCollectionView.m */; };
+		C7DE2CC222D357E00059D783 /* ZJSegmentStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CB822D357E00059D783 /* ZJSegmentStyle.m */; };
+		C7DE2CC322D357E00059D783 /* ZJScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CB922D357E00059D783 /* ZJScrollSegmentView.m */; };
+		C7DE2CC422D357E00059D783 /* ZJScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CBA22D357E00059D783 /* ZJScrollPageView.m */; };
+		C7DE2CC722D357F20059D783 /* HLListViewMoveChildController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CC622D357F20059D783 /* HLListViewMoveChildController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C7518A0E22D356E0000F9AD6 /* HLListViewMoveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLListViewMoveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7518A1122D356E0000F9AD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C7518A1222D356E0000F9AD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C7518A1422D356E0000F9AD6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C7518A1522D356E0000F9AD6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C7518A1822D356E0000F9AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7518A1A22D356E1000F9AD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7518A1D22D356E1000F9AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7518A1F22D356E1000F9AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7518A2022D356E1000F9AD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7DE2C9822D357CF0059D783 /* UIView+HLScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HLScreenshot.h"; sourceTree = "<group>"; };
+		C7DE2C9922D357CF0059D783 /* HLListViewMoveGestureCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLListViewMoveGestureCoordinator.h; sourceTree = "<group>"; };
+		C7DE2C9A22D357CF0059D783 /* UICollectionView+HLListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+HLListView.m"; sourceTree = "<group>"; };
+		C7DE2C9B22D357CF0059D783 /* UITableView+HLListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HLListView.h"; sourceTree = "<group>"; };
+		C7DE2C9C22D357CF0059D783 /* HLDragArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDragArea.h; sourceTree = "<group>"; };
+		C7DE2C9D22D357CF0059D783 /* NSMutableArray+HLExchangeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+HLExchangeObject.h"; sourceTree = "<group>"; };
+		C7DE2C9E22D357CF0059D783 /* UITableView+HLListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HLListView.m"; sourceTree = "<group>"; };
+		C7DE2C9F22D357CF0059D783 /* HLListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLListView.h; sourceTree = "<group>"; };
+		C7DE2CA022D357CF0059D783 /* HLListViewMoveGestureCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLListViewMoveGestureCoordinator.m; sourceTree = "<group>"; };
+		C7DE2CA122D357CF0059D783 /* UICollectionView+HLListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+HLListView.h"; sourceTree = "<group>"; };
+		C7DE2CA222D357CF0059D783 /* UIView+HLScreenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HLScreenshot.m"; sourceTree = "<group>"; };
+		C7DE2CA322D357CF0059D783 /* HLDragArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDragArea.m; sourceTree = "<group>"; };
+		C7DE2CA422D357CF0059D783 /* NSMutableArray+HLExchangeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+HLExchangeObject.m"; sourceTree = "<group>"; };
+		C7DE2CAC22D357E00059D783 /* ZJContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJContentView.h; sourceTree = "<group>"; };
+		C7DE2CAD22D357E00059D783 /* UIView+ZJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJFrame.m"; sourceTree = "<group>"; };
+		C7DE2CAE22D357E00059D783 /* ZJCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCollectionView.h; sourceTree = "<group>"; };
+		C7DE2CAF22D357E00059D783 /* ZJScrollSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollSegmentView.h; sourceTree = "<group>"; };
+		C7DE2CB022D357E00059D783 /* ZJScrollPageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageViewDelegate.h; sourceTree = "<group>"; };
+		C7DE2CB122D357E00059D783 /* ZJSegmentStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSegmentStyle.h; sourceTree = "<group>"; };
+		C7DE2CB222D357E00059D783 /* ZJTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTitleView.m; sourceTree = "<group>"; };
+		C7DE2CB322D357E00059D783 /* UIViewController+ZJScrollPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZJScrollPageController.m"; sourceTree = "<group>"; };
+		C7DE2CB422D357E00059D783 /* ZJScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageView.h; sourceTree = "<group>"; };
+		C7DE2CB522D357E00059D783 /* UIView+ZJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJFrame.h"; sourceTree = "<group>"; };
+		C7DE2CB622D357E00059D783 /* ZJContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJContentView.m; sourceTree = "<group>"; };
+		C7DE2CB722D357E00059D783 /* ZJCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCollectionView.m; sourceTree = "<group>"; };
+		C7DE2CB822D357E00059D783 /* ZJSegmentStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSegmentStyle.m; sourceTree = "<group>"; };
+		C7DE2CB922D357E00059D783 /* ZJScrollSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollSegmentView.m; sourceTree = "<group>"; };
+		C7DE2CBA22D357E00059D783 /* ZJScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollPageView.m; sourceTree = "<group>"; };
+		C7DE2CBB22D357E00059D783 /* UIViewController+ZJScrollPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZJScrollPageController.h"; sourceTree = "<group>"; };
+		C7DE2CBC22D357E00059D783 /* ZJTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTitleView.h; sourceTree = "<group>"; };
+		C7DE2CC522D357F20059D783 /* HLListViewMoveChildController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLListViewMoveChildController.h; sourceTree = "<group>"; };
+		C7DE2CC622D357F20059D783 /* HLListViewMoveChildController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLListViewMoveChildController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7518A0B22D356E0000F9AD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7518A0522D356E0000F9AD6 = {
+			isa = PBXGroup;
+			children = (
+				C7518A1022D356E0000F9AD6 /* HLListViewMoveDemo */,
+				C7518A0F22D356E0000F9AD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7518A0F22D356E0000F9AD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7518A0E22D356E0000F9AD6 /* HLListViewMoveDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7518A1022D356E0000F9AD6 /* HLListViewMoveDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE2CAB22D357E00059D783 /* ZJScrollPageView */,
+				C7DE2C9722D357CF0059D783 /* HLListViewMoveTool */,
+				C7518A1122D356E0000F9AD6 /* AppDelegate.h */,
+				C7518A1222D356E0000F9AD6 /* AppDelegate.m */,
+				C7518A1422D356E0000F9AD6 /* ViewController.h */,
+				C7518A1522D356E0000F9AD6 /* ViewController.m */,
+				C7DE2CC522D357F20059D783 /* HLListViewMoveChildController.h */,
+				C7DE2CC622D357F20059D783 /* HLListViewMoveChildController.m */,
+				C7518A1722D356E0000F9AD6 /* Main.storyboard */,
+				C7518A1A22D356E1000F9AD6 /* Assets.xcassets */,
+				C7518A1C22D356E1000F9AD6 /* LaunchScreen.storyboard */,
+				C7518A1F22D356E1000F9AD6 /* Info.plist */,
+				C7518A2022D356E1000F9AD6 /* main.m */,
+			);
+			path = HLListViewMoveDemo;
+			sourceTree = "<group>";
+		};
+		C7DE2C9722D357CF0059D783 /* HLListViewMoveTool */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE2C9822D357CF0059D783 /* UIView+HLScreenshot.h */,
+				C7DE2C9922D357CF0059D783 /* HLListViewMoveGestureCoordinator.h */,
+				C7DE2C9A22D357CF0059D783 /* UICollectionView+HLListView.m */,
+				C7DE2C9B22D357CF0059D783 /* UITableView+HLListView.h */,
+				C7DE2C9C22D357CF0059D783 /* HLDragArea.h */,
+				C7DE2C9D22D357CF0059D783 /* NSMutableArray+HLExchangeObject.h */,
+				C7DE2C9E22D357CF0059D783 /* UITableView+HLListView.m */,
+				C7DE2C9F22D357CF0059D783 /* HLListView.h */,
+				C7DE2CA022D357CF0059D783 /* HLListViewMoveGestureCoordinator.m */,
+				C7DE2CA122D357CF0059D783 /* UICollectionView+HLListView.h */,
+				C7DE2CA222D357CF0059D783 /* UIView+HLScreenshot.m */,
+				C7DE2CA322D357CF0059D783 /* HLDragArea.m */,
+				C7DE2CA422D357CF0059D783 /* NSMutableArray+HLExchangeObject.m */,
+			);
+			name = HLListViewMoveTool;
+			path = ../../HLListViewMoveTool;
+			sourceTree = "<group>";
+		};
+		C7DE2CAB22D357E00059D783 /* ZJScrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE2CAC22D357E00059D783 /* ZJContentView.h */,
+				C7DE2CAD22D357E00059D783 /* UIView+ZJFrame.m */,
+				C7DE2CAE22D357E00059D783 /* ZJCollectionView.h */,
+				C7DE2CAF22D357E00059D783 /* ZJScrollSegmentView.h */,
+				C7DE2CB022D357E00059D783 /* ZJScrollPageViewDelegate.h */,
+				C7DE2CB122D357E00059D783 /* ZJSegmentStyle.h */,
+				C7DE2CB222D357E00059D783 /* ZJTitleView.m */,
+				C7DE2CB322D357E00059D783 /* UIViewController+ZJScrollPageController.m */,
+				C7DE2CB422D357E00059D783 /* ZJScrollPageView.h */,
+				C7DE2CB522D357E00059D783 /* UIView+ZJFrame.h */,
+				C7DE2CB622D357E00059D783 /* ZJContentView.m */,
+				C7DE2CB722D357E00059D783 /* ZJCollectionView.m */,
+				C7DE2CB822D357E00059D783 /* ZJSegmentStyle.m */,
+				C7DE2CB922D357E00059D783 /* ZJScrollSegmentView.m */,
+				C7DE2CBA22D357E00059D783 /* ZJScrollPageView.m */,
+				C7DE2CBB22D357E00059D783 /* UIViewController+ZJScrollPageController.h */,
+				C7DE2CBC22D357E00059D783 /* ZJTitleView.h */,
+			);
+			path = ZJScrollPageView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7518A0D22D356E0000F9AD6 /* HLListViewMoveDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7518A2422D356E1000F9AD6 /* Build configuration list for PBXNativeTarget "HLListViewMoveDemo" */;
+			buildPhases = (
+				C7518A0A22D356E0000F9AD6 /* Sources */,
+				C7518A0B22D356E0000F9AD6 /* Frameworks */,
+				C7518A0C22D356E0000F9AD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HLListViewMoveDemo;
+			productName = HLListViewMoveDemo;
+			productReference = C7518A0E22D356E0000F9AD6 /* HLListViewMoveDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7518A0622D356E0000F9AD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = alin;
+				TargetAttributes = {
+					C7518A0D22D356E0000F9AD6 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = C7518A0922D356E0000F9AD6 /* Build configuration list for PBXProject "HLListViewMoveDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7518A0522D356E0000F9AD6;
+			productRefGroup = C7518A0F22D356E0000F9AD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7518A0D22D356E0000F9AD6 /* HLListViewMoveDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7518A0C22D356E0000F9AD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7518A1E22D356E1000F9AD6 /* LaunchScreen.storyboard in Resources */,
+				C7518A1B22D356E1000F9AD6 /* Assets.xcassets in Resources */,
+				C7518A1922D356E0000F9AD6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7518A0A22D356E0000F9AD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7DE2CBD22D357E00059D783 /* UIView+ZJFrame.m in Sources */,
+				C7DE2CC322D357E00059D783 /* ZJScrollSegmentView.m in Sources */,
+				C7DE2CA822D357CF0059D783 /* UIView+HLScreenshot.m in Sources */,
+				C7DE2CA722D357CF0059D783 /* HLListViewMoveGestureCoordinator.m in Sources */,
+				C7DE2CA922D357CF0059D783 /* HLDragArea.m in Sources */,
+				C7DE2CBF22D357E00059D783 /* UIViewController+ZJScrollPageController.m in Sources */,
+				C7DE2CC722D357F20059D783 /* HLListViewMoveChildController.m in Sources */,
+				C7DE2CC422D357E00059D783 /* ZJScrollPageView.m in Sources */,
+				C7518A1622D356E0000F9AD6 /* ViewController.m in Sources */,
+				C7DE2CC022D357E00059D783 /* ZJContentView.m in Sources */,
+				C7518A2122D356E1000F9AD6 /* main.m in Sources */,
+				C7DE2CC122D357E00059D783 /* ZJCollectionView.m in Sources */,
+				C7DE2CA622D357CF0059D783 /* UITableView+HLListView.m in Sources */,
+				C7518A1322D356E0000F9AD6 /* AppDelegate.m in Sources */,
+				C7DE2CBE22D357E00059D783 /* ZJTitleView.m in Sources */,
+				C7DE2CA522D357CF0059D783 /* UICollectionView+HLListView.m in Sources */,
+				C7DE2CAA22D357CF0059D783 /* NSMutableArray+HLExchangeObject.m in Sources */,
+				C7DE2CC222D357E00059D783 /* ZJSegmentStyle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7518A1722D356E0000F9AD6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7518A1822D356E0000F9AD6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7518A1C22D356E1000F9AD6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7518A1D22D356E1000F9AD6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7518A2222D356E1000F9AD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C7518A2322D356E1000F9AD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7518A2522D356E1000F9AD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HLListViewMoveDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alin.HLListViewMoveDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7518A2622D356E1000F9AD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HLListViewMoveDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alin.HLListViewMoveDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7518A0922D356E0000F9AD6 /* Build configuration list for PBXProject "HLListViewMoveDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7518A2222D356E1000F9AD6 /* Debug */,
+				C7518A2322D356E1000F9AD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7518A2422D356E1000F9AD6 /* Build configuration list for PBXNativeTarget "HLListViewMoveDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7518A2522D356E1000F9AD6 /* Debug */,
+				C7518A2622D356E1000F9AD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7518A0622D356E0000F9AD6 /* Project object */;
+}

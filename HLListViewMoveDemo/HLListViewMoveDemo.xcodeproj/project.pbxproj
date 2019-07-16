@@ -125,18 +125,18 @@
 		C7DE2C9722D357CF0059D783 /* HLListViewMoveTool */ = {
 			isa = PBXGroup;
 			children = (
-				C7DE2C9822D357CF0059D783 /* UIView+HLScreenshot.h */,
+				C7DE2C9C22D357CF0059D783 /* HLDragArea.h */,
+				C7DE2CA322D357CF0059D783 /* HLDragArea.m */,
+				C7DE2C9F22D357CF0059D783 /* HLListView.h */,
 				C7DE2C9922D357CF0059D783 /* HLListViewMoveGestureCoordinator.h */,
+				C7DE2CA022D357CF0059D783 /* HLListViewMoveGestureCoordinator.m */,
+				C7DE2C9822D357CF0059D783 /* UIView+HLScreenshot.h */,
+				C7DE2CA222D357CF0059D783 /* UIView+HLScreenshot.m */,
+				C7DE2CA122D357CF0059D783 /* UICollectionView+HLListView.h */,
 				C7DE2C9A22D357CF0059D783 /* UICollectionView+HLListView.m */,
 				C7DE2C9B22D357CF0059D783 /* UITableView+HLListView.h */,
-				C7DE2C9C22D357CF0059D783 /* HLDragArea.h */,
-				C7DE2C9D22D357CF0059D783 /* NSMutableArray+HLExchangeObject.h */,
 				C7DE2C9E22D357CF0059D783 /* UITableView+HLListView.m */,
-				C7DE2C9F22D357CF0059D783 /* HLListView.h */,
-				C7DE2CA022D357CF0059D783 /* HLListViewMoveGestureCoordinator.m */,
-				C7DE2CA122D357CF0059D783 /* UICollectionView+HLListView.h */,
-				C7DE2CA222D357CF0059D783 /* UIView+HLScreenshot.m */,
-				C7DE2CA322D357CF0059D783 /* HLDragArea.m */,
+				C7DE2C9D22D357CF0059D783 /* NSMutableArray+HLExchangeObject.h */,
 				C7DE2CA422D357CF0059D783 /* NSMutableArray+HLExchangeObject.m */,
 			);
 			name = HLListViewMoveTool;
@@ -397,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88U32AS72B;
 				INFOPLIST_FILE = HLListViewMoveDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88U32AS72B;
 				INFOPLIST_FILE = HLListViewMoveDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

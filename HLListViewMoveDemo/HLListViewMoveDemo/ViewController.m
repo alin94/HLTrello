@@ -76,8 +76,8 @@ static const int listCount  = 6;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     _childVCS = [NSMutableArray array];
-    //    [self configDataArray];
-    [self configGroupDataArray];
+        [self configDataArray];
+//    [self configGroupDataArray];
     [self configLayout];
     [self scrollView];
     [self contentView];
@@ -142,7 +142,7 @@ static const int listCount  = 6;
     _dataArray = [NSMutableArray array];
     for (int i = 0; i < listCount; i++) {
         NSMutableArray * childVCDataArray = [NSMutableArray array];
-        for (int j = 0 ; j < 12; j++) {
+        for (int j = 0 ; j < 2; j++) {
             NSString * text = [NSString stringWithFormat:@"Controll %d cell:%d",i+1,j+1];
             [childVCDataArray addObject:text];
         }
@@ -230,22 +230,23 @@ static const int listCount  = 6;
         childVc.titleText = [NSString stringWithFormat:@"Controller %d",index + 1];
         childVc.dataArray = self.dataArray[index];
         [_childVCS addObject:childVc];
-        if (index == listCount - 1) {
-            NSMutableArray *tableViews = [NSMutableArray array];
-            for (HLListViewMoveChildController *vc in _childVCS) {
-                [tableViews addObject:vc.tableView];
-            }
-            [self addGestForAllGesWithTableViews:tableViews];
-            self.contentView.collectionView.dataSourceArray = self.childVCS;
-        }
         NSLog(@"轮到%d",index);
     }
     return childVc;
 }
+- (void)scrollPageController:(UIViewController *)scrollPageController childViewControllWillAppear:(UIViewController *)childViewController forIndex:(NSInteger)index;
+{
+    if (index == listCount - 1) {
+        NSMutableArray *tableViews = [NSMutableArray array];
+        for (HLListViewMoveChildController *vc in _childVCS) {
+            [tableViews addObject:vc.tableView];
+        }
+        [self addGestForAllGesWithTableViews:tableViews];
+    }
+}
 #pragma mark- UIScrollViewRollViewDelegate
 
-- (void)hl_listViewBeginLongPressAtIndexPath:(NSIndexPath *)indexPath gestureCoordinator:(HLListViewMoveGestureCoordinator *)gestureCoordinator
-{
+- (void)hl_listViewBeginLongPressAtIndexPath:(NSIndexPath *)indexPath onListView:(UIView<HLListView> *)listView gestureCoordinator:(HLListViewMoveGestureCoordinator *)gestureCoordinator{
     if (gestureCoordinator == self.collectionViewMoveGes) {
         self.lastZoomIn = self.zoomIn;
         if (!self.zoomIn) {
@@ -254,8 +255,7 @@ static const int listCount  = 6;
         }
     }
 }
-- (void)hl_listViewRollingCellDidEndScrollAtIndexPath:(NSIndexPath *)indexPath gestureCoordinator:(HLListViewMoveGestureCoordinator *)gestureCoordinator
-{
+- (void)hl_listViewRollingCellDidEndScrollAtIndexPath:(NSIndexPath *)indexPath onListView:(UIView<HLListView> *)listView gestureCoordinator:(HLListViewMoveGestureCoordinator *)gestureCoordinator{
     if (gestureCoordinator == self.collectionViewMoveGes) {
         if (!self.lastZoomIn) {
             self.zoomIn = NO;

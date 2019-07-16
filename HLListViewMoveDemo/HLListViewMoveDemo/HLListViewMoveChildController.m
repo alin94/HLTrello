@@ -145,6 +145,9 @@
         if (height > maxHeight) {
             height = maxHeight;
         }
+        if (height < 5) {
+            height = 5;
+        }
         self.tableView.frame = CGRectMake(0, 60, self.view.frame.size.width , height);
     }
     else{

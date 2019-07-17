@@ -7,7 +7,7 @@
 //
 
 #import "HLListViewMoveChildController.h"
-#import "UITableView+HLListView.h"
+#import "UIView+HLListView.h"
 
 @interface HLListViewMoveChildController ()<UITableViewDelegate,UITableViewDataSource>
 

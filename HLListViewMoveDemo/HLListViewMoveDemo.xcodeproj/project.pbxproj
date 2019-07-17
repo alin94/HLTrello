@@ -13,6 +13,7 @@
 		C7518A1B22D356E1000F9AD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7518A1A22D356E1000F9AD6 /* Assets.xcassets */; };
 		C7518A1E22D356E1000F9AD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7518A1C22D356E1000F9AD6 /* LaunchScreen.storyboard */; };
 		C7518A2122D356E1000F9AD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7518A2022D356E1000F9AD6 /* main.m */; };
+		C767EDDF22DEECE400FB39B1 /* UIView+HLListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C767EDDE22DEECE400FB39B1 /* UIView+HLListView.m */; };
 		C7DE2CA522D357CF0059D783 /* UICollectionView+HLListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2C9A22D357CF0059D783 /* UICollectionView+HLListView.m */; };
 		C7DE2CA622D357CF0059D783 /* UITableView+HLListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2C9E22D357CF0059D783 /* UITableView+HLListView.m */; };
 		C7DE2CA722D357CF0059D783 /* HLListViewMoveGestureCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2CA022D357CF0059D783 /* HLListViewMoveGestureCoordinator.m */; };
@@ -41,6 +42,8 @@
 		C7518A1D22D356E1000F9AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7518A1F22D356E1000F9AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7518A2022D356E1000F9AD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C767EDDD22DEECE400FB39B1 /* UIView+HLListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HLListView.h"; sourceTree = "<group>"; };
+		C767EDDE22DEECE400FB39B1 /* UIView+HLListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HLListView.m"; sourceTree = "<group>"; };
 		C7DE2C9822D357CF0059D783 /* UIView+HLScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HLScreenshot.h"; sourceTree = "<group>"; };
 		C7DE2C9922D357CF0059D783 /* HLListViewMoveGestureCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLListViewMoveGestureCoordinator.h; sourceTree = "<group>"; };
 		C7DE2C9A22D357CF0059D783 /* UICollectionView+HLListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+HLListView.m"; sourceTree = "<group>"; };
@@ -125,13 +128,15 @@
 		C7DE2C9722D357CF0059D783 /* HLListViewMoveTool */ = {
 			isa = PBXGroup;
 			children = (
-				C7DE2C9C22D357CF0059D783 /* HLDragArea.h */,
-				C7DE2CA322D357CF0059D783 /* HLDragArea.m */,
-				C7DE2C9F22D357CF0059D783 /* HLListView.h */,
 				C7DE2C9922D357CF0059D783 /* HLListViewMoveGestureCoordinator.h */,
 				C7DE2CA022D357CF0059D783 /* HLListViewMoveGestureCoordinator.m */,
+				C7DE2C9C22D357CF0059D783 /* HLDragArea.h */,
+				C7DE2CA322D357CF0059D783 /* HLDragArea.m */,
 				C7DE2C9822D357CF0059D783 /* UIView+HLScreenshot.h */,
 				C7DE2CA222D357CF0059D783 /* UIView+HLScreenshot.m */,
+				C7DE2C9F22D357CF0059D783 /* HLListView.h */,
+				C767EDDD22DEECE400FB39B1 /* UIView+HLListView.h */,
+				C767EDDE22DEECE400FB39B1 /* UIView+HLListView.m */,
 				C7DE2CA122D357CF0059D783 /* UICollectionView+HLListView.h */,
 				C7DE2C9A22D357CF0059D783 /* UICollectionView+HLListView.m */,
 				C7DE2C9B22D357CF0059D783 /* UITableView+HLListView.h */,
@@ -254,6 +259,7 @@
 				C7DE2CBE22D357E00059D783 /* ZJTitleView.m in Sources */,
 				C7DE2CA522D357CF0059D783 /* UICollectionView+HLListView.m in Sources */,
 				C7DE2CAA22D357CF0059D783 /* NSMutableArray+HLExchangeObject.m in Sources */,
+				C767EDDF22DEECE400FB39B1 /* UIView+HLListView.m in Sources */,
 				C7DE2CC222D357E00059D783 /* ZJSegmentStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

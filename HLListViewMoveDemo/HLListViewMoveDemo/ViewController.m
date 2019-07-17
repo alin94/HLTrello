@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UICollectionView+HLListView.h"
+#import "UIView+HLListView.h"
 #import "HLListViewMoveGestureCoordinator.h"
 #import "ZJContentView.h"
 #import "HLListViewMoveChildController.h"
@@ -238,8 +238,11 @@ static const int listCount  = 6;
 {
     if (index == listCount - 1) {
         NSMutableArray *tableViews = [NSMutableArray array];
+        NSInteger i = 0;
         for (HLListViewMoveChildController *vc in _childVCS) {
+            vc.tableView.idString = [NSString stringWithFormat:@"list%d",i];
             [tableViews addObject:vc.tableView];
+            i++;
         }
         [self addGestForAllGesWithTableViews:tableViews];
     }
@@ -256,6 +259,7 @@ static const int listCount  = 6;
     }
 }
 - (void)hl_listViewRollingCellDidEndScrollAtIndexPath:(NSIndexPath *)indexPath onListView:(UIView<HLListView> *)listView gestureCoordinator:(HLListViewMoveGestureCoordinator *)gestureCoordinator{
+    NSLog(@"listViewId===%@",listView.idString);
     if (gestureCoordinator == self.collectionViewMoveGes) {
         if (!self.lastZoomIn) {
             self.zoomIn = NO;

@@ -476,23 +476,24 @@ typedef NS_ENUM(NSUInteger, HLListViewAutoScrollDirection) {
         return NO;
     }
     if (gestureRecognizer == self.longPress) {
+        CGPoint fingerPosition = [gestureRecognizer locationInView:gestureRecognizer.view];
+        self.fingerPosition = fingerPosition;
         [self resetCurrentDraggingCollection];
+        if (!self.currentDraggingCollection) {
+            //没有选中list
+            return NO;
+        }
         if (self.delegate && [self.delegate respondsToSelector:@selector(hl_listViewShouldBeginLongPress: onListView:gestureCoordinator:)]) {
             BOOL allow = [self.delegate hl_listViewShouldBeginLongPress:gestureRecognizer onListView:self.currentDraggingCollection gestureCoordinator:self];
             if (!allow) {
                 return allow;
             }
         }
-        CGPoint fingerPosition = [gestureRecognizer locationInView:gestureRecognizer.view];
         //检查可长按手势范围
         if (fingerPosition.y > self.longPressPositionMaxY) {
             return NO;
         }
-        self.fingerPosition = fingerPosition;
-        if (!self.currentDraggingCollection) {
-            //没有选中list
-            return NO;
-        }
+        
         NSIndexPath * indexPath = [self.currentDraggingCollection indexPathForItemAtPoint:[self convertPointToDraggingCollection:fingerPosition]];
         if (!indexPath) {
             //没有选中cell

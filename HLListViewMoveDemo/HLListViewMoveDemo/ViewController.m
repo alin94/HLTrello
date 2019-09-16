@@ -230,7 +230,7 @@ static const int listCount  = 6;
         childVc.titleText = [NSString stringWithFormat:@"Controller %d",index + 1];
         childVc.dataArray = self.dataArray[index];
         [_childVCS addObject:childVc];
-        NSLog(@"轮到%d",index);
+        NSLog(@"轮到%d了",index);
     }
     return childVc;
 }

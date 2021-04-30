@@ -8,6 +8,7 @@
 
 #import "HLListViewMoveChildController.h"
 #import "UIView+HLListView.h"
+#import "HLEditCollectionViewController.h"
 
 @interface HLListViewMoveChildController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -133,7 +134,12 @@
     }
     return nil;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HLEditCollectionViewController *vc = [[HLEditCollectionViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc ];
+    [self presentViewController:nav animated:YES completion:nil];
+}
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
     if (([keyPath isEqualToString:@"contentSize"] && object == self.tableView) || ([keyPath isEqualToString:@"frame"] && object == self.view)) {

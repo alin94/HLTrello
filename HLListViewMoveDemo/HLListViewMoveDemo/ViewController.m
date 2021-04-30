@@ -90,6 +90,7 @@ static const int listCount  = 6;
     self.collectionView.bounces = YES;
     UIGestureRecognizer *gesture = self.collectionView.pinchGestureRecognizer;
     [self.collectionView removeGestureRecognizer:gesture];
+    self.collectionView.dataSourceArray = self.dataArray;
     __weak typeof(self) weakSelf = self;
     self.collectionView.dataSourceChangedBlock = ^(NSArray *dataSourceArray) {
         [weakSelf.dataArray removeAllObjects];

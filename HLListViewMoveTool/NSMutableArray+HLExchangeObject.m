@@ -13,12 +13,16 @@
     NSParameterAssert([self isKindOfClass:[NSMutableArray class]] || !self.count);
     if (fromIndex < toIndex) {
         for (NSInteger i = fromIndex; i < toIndex; i++) {
-            [self exchangeObjectAtIndex:i withObjectAtIndex:i + 1];
+            if (i+1<self.count) {
+                [self exchangeObjectAtIndex:i withObjectAtIndex:i + 1];
+            }
         }
     }
     else {
         for (NSInteger i = fromIndex; i > toIndex; i--) {
-            [self exchangeObjectAtIndex:i withObjectAtIndex:i - 1];
+            if(i < self.count && i > 0){
+                [self exchangeObjectAtIndex:i withObjectAtIndex:i - 1];
+            }
         }
     }
 }

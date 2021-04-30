@@ -11,6 +11,11 @@
 #import "HLDragArea.h"
 #import "HLListView.h"
 
+typedef NS_ENUM(NSUInteger, HLListViewDragItemStyle) {
+    HLListViewDragItemStyleDefault = 0,//默认样式 旋转加阴影加透明度
+    HLListViewDragItemStyle1 //只加边框
+};
+
 @class HLListViewMoveGestureCoordinator;
 
 @protocol HLListViewMoveDelegate <NSObject>
@@ -44,6 +49,9 @@
 
 /**手指允许长按最大Y值*/
 @property (nonatomic, assign) CGFloat longPressPositionMaxY;
+/** 拖动的视图样式 默认是 HLListViewDragItemStyleDefault*/
+@property (nonatomic, assign) HLListViewDragItemStyle rollingItemStyle;
+
 /**长按手势 只读*/
 @property (nonatomic, strong, readonly) UILongPressGestureRecognizer *longPress;
 

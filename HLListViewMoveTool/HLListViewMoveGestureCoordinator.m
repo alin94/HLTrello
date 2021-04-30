@@ -116,6 +116,7 @@ typedef NS_ENUM(NSUInteger, HLListViewAutoScrollDirection) {
     self.moveEnabled = self.mixMoveEnabled = YES;
     self.longPressPositionMaxY = CGFLOAT_MAX;
     self.autoRollCellSpeed = 3;
+    self.rollingItemStyle = HLListViewDragItemStyleDefault;
     self.rollingColor = [UIColor blackColor];
     self.rollIngShadowOpacity = 0.3;
     self.arena.superview.userInteractionEnabled = YES;
@@ -129,9 +130,6 @@ typedef NS_ENUM(NSUInteger, HLListViewAutoScrollDirection) {
  */
 - (void)moveCellToNewIndexPath:(NSIndexPath *)newIndexPath{
     if (!self.lastRollIndexPath) {
-        return;
-    }
-    if (newIndexPath == self.lastRollIndexPath) {
         return;
     }
     //检查是否禁止move
@@ -288,6 +286,9 @@ typedef NS_ENUM(NSUInteger, HLListViewAutoScrollDirection) {
 - (void)moveCell
 {
     if (self.currentRollIndexPath) {
+        if (self.currentRollIndexPath == self.lastRollIndexPath) {
+            return;
+        }
         [self moveCellToNewIndexPath:self.currentRollIndexPath];
     }else{
         [self stopMoveTimer];
@@ -398,11 +399,19 @@ typedef NS_ENUM(NSUInteger, HLListViewAutoScrollDirection) {
     [self.arena.superview bringSubviewToFront:screenshotView];
     self.screenshotView = screenshotView;
     cell.hidden = YES;
-    //旋转5度角
-    [UIView animateWithDuration:0.2 animations:^{
-        self.screenshotView.transform = CGAffineTransformMakeRotation( 5.0/180.0*M_PI);
-        self.screenshotView.alpha = 0.98;
-    }];
+    if(self.rollingItemStyle == HLListViewDragItemStyleDefault) {
+        //旋转5度角
+        [UIView animateWithDuration:0.2 animations:^{
+            self.screenshotView.transform = CGAffineTransformMakeRotation( 5.0/180.0*M_PI);
+            self.screenshotView.alpha = 0.98;
+        }];
+
+    }else if (self.rollingItemStyle == HLListViewDragItemStyle1){
+        self.screenshotView.clipsToBounds = YES;
+        self.screenshotView.layer.borderWidth = 1;
+        self.screenshotView.layer.borderColor = [UIColor colorWithRed:231/255.0 green:231/255.0 blue:231/255.0 alpha:1.00].CGColor;
+        self.screenshotView.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 // 检查截图是否到达边缘，并作出响应
@@ -561,7 +570,9 @@ typedef NS_ENUM(NSUInteger, HLListViewAutoScrollDirection) {
             [UIView animateWithDuration:0.1 animations:^{
                 self.screenshotView.center = self.fingerPosition;
             }];
+
         }else{
+            BOOL change = YES;
             CGPoint center = self.screenshotView.center;
             HLListViewScrollDirection direction = [self getRollRirectionWithScrollView:(UIScrollView *)self.currentDraggingCollection];
             if (direction == HLListViewScrollDirectionVertical) {
@@ -569,11 +580,13 @@ typedef NS_ENUM(NSUInteger, HLListViewAutoScrollDirection) {
             }else if (direction == HLListViewScrollDirectionHorizontal){
                 center.x = self.fingerPosition.x;
             }else{
-                center = self.fingerPosition;
+                change = NO;
             }
-            [UIView animateWithDuration:0.1 animations:^{
-                self.screenshotView.center = center;
-            }];
+            if(change){
+                [UIView animateWithDuration:0.1 animations:^{
+                    self.screenshotView.center = center;
+                }];
+            }
             
         }
         if (self.lastRollIndexPath&&self.currentRollIndexPath && ![self.currentRollIndexPath isEqual:self.lastRollIndexPath]) {
@@ -598,13 +611,15 @@ typedef NS_ENUM(NSUInteger, HLListViewAutoScrollDirection) {
     }
     else {
         NSLog(@"停止啦啦啦");
-        [self stopMoveTimer];
-        // 其他情况，比如长按手势结束或被取消，移除截图，显示cell
-        if (self.currentRollIndexPath && ![self.currentRollIndexPath isEqual:self.lastRollIndexPath]) {
-            [self moveCellToNewIndexPath:self.currentRollIndexPath];
-        }else{
+        //拖出了collectionViewCell显示区域外 就置为上次的范围
+        if(!self.currentDraggingCollection){
+            self.currentDraggingCollection = self.lastDraggingCollection;
+        }
+        if(!self.currentRollIndexPath || [self.currentDraggingCollection.indexPathsForNotAllowMove containsObject:self.currentRollIndexPath]){
             self.currentRollIndexPath = self.lastRollIndexPath;
         }
+        [self stopMoveTimer];
+        [self moveCellToNewIndexPath:self.currentRollIndexPath];
         [self stopAutoScroll];
         [self rollingCellDidEndScroll];
     }
